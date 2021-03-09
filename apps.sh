@@ -21,11 +21,13 @@ cd /home/$USER/Downloads
 
 # sublime - download and installation
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
+<<<<<<< HEAD
 sudo apt install -y apt-transport-https &&
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list &&
 sudo apt update -y &&
 sudo apt install sublime-text -y;
-
+=======
+>>>>>>> 98fc6f6808dc5f2631ec14e504b8f91921e998af
 # qbittorrent
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable -y &&
 sudo apt install qbittorrent -y;
