@@ -1,7 +1,9 @@
 #!/bin/bash
 
+sudo apt autoremove -y && apt clean;
+
 # Installing GIT
-sudo apt install git;
+sudo apt install git -y;
 
 ## Configuring GIT
 git config --global user.name "ropoko";
@@ -9,9 +11,9 @@ git config --global user.email rodrigostramantinoli@gmail.com;
 git config --global init.defaultBranch main;
 
 # Installing ZSH
-sudo apt install zsh && chsh -s $(which zsh);
+sudo apt install zsh -y && chsh -s $(which zsh);
 
-sudo apt update && sudo apt upgrade
+sudo apt update -y && sudo apt upgrade -y
 
 ## Installing oh-my-zsh
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh &&
@@ -24,7 +26,7 @@ cd ~/.asdf;
 git checkout "$(git describe --abbrev=0 --tags)";
 
 # Adding plugins to ZSH
-sudo apt install sed;
+sudo apt install sed -y;
 
 if grep -q "plugin=(git)"; then
     sed -i 's/plugin=(git)/plugins=(git sudo asdf virtualenv)/g' ~/.zshrc;
