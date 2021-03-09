@@ -2,6 +2,10 @@
 
 sudo apt update -y && apt upgrade -y &&
 
+sudo rm /var/lib/dpkg/lock-frontend ; sudo rm /var/cache/apt/archives/lock;
+
+sudo dpkg --configure -a &&
+
 # Installing snaps
 sudo apt install snapd -y &&
 
