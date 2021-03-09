@@ -13,7 +13,7 @@ git config --global init.defaultBranch main;
 # Installing ZSH
 sudo apt install zsh -y && chsh -s $(which zsh);
 
-sudo apt update -y && sudo apt upgrade -y
+sudo apt update -y && sudo apt upgrade -y &&
 
 ## Installing oh-my-zsh
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh &&

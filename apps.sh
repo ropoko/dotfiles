@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update -y && apt upgrade -y
+sudo apt update -y && apt upgrade -y &&
 
 # Installing snaps
 sudo apt install snapd -y &&
