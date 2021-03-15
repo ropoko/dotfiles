@@ -9,19 +9,31 @@ sudo dpkg --configure -a &&
 # Installing snaps
 sudo apt install snapd -y &&
 
-sudo snap install cli-dictionary;
-sudo snap install code --classic;
-sudo snap install discord;
-sudo snap install leagueoflegends --devmode --dangerous;
-sudo snap install notion-snap;
-sudo snap install review-tools;
-sudo snap install spotify;
-sudo snap install telegram-desktop;
-sudo snap install strimio-desktop;
+sudo snap install cli-dictionary &&
+sudo snap install code --classic &&
+sudo snap install discord &&
+sudo snap install notion-snap &&
+sudo snap install review-tools &&
+sudo snap install telegram-desktop &&
+sudo snap install strimio-desktop &&
+sudo snap install mailspring &&
 
 # programs with apt
 
 cd /home/$USER/Downloads
+
+# spotify - spicetify
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+;echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+;sudo apt-get update && sudo apt-get install spotify-client
+
+;sudo chmod a+wr /usr/share/spotify
+;sudo chmod a+wr /usr/share/spotify/Apps -R
+;curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
+;/home/$USER/spicetify-cli/spicetify backup apply
+;/home/$USER/spicetify-cli/spicetify  config current_theme Dracula
+;/home/$USER/spicetify-cli/spicetify apply
+;
 
 # sublime - download and installation
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
