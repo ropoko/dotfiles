@@ -57,20 +57,20 @@ sudo chmod u+x *.appimage
 # steam
 sudo apt install steam -y
 
-# caffeine 
+# caffeine
 sudo apt install caffeine -y
 
 # font-manager
 sudo apt install font-manager -y
 
+# virtualbox
 wget -c https://download.virtualbox.org/virtualbox/6.1.18/virtualbox-6.1_6.1.18-142142~Ubuntu~eoan_amd64.deb
+
+# gnome-tweaks
+sudo apt install gnome-tweaks -y
 
 # Installing .deb files
 sudo dpkg -i *.deb
 
-# Removing default apps 
+# Removing default apps
 sudo apt remove firefox -y && sudo apt remove gedit -y
-
-# Configuration file
-sudo chmod +x ./configuration.sh
-./configuration.sh
