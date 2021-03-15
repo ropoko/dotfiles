@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt autoremove -y && apt clean
+sudo apt autoremove -y && sudo apt clean
 
 # Installing GIT
 sudo apt install git -y
@@ -26,3 +26,21 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 cd ~/.asdf
 git checkout "$(git describe --abbrev=0 --tags)"
+
+# ASDF - plugins
+asdf plugin-add python
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin-add v
+
+asdf global python 3.9.2
+asdf global nodejs 14.16.0
+asdf global v 0.2.2
+
+# Configuring python
+update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+sudo apt install python3.8-distutils 
+
+# Change icon cursor
+echo "You need to select this icon with gnome-tweaks.."
+cd ~/dotfiles && sudo cp -r icons/bibata_Ghost /usr/share/icons
+
