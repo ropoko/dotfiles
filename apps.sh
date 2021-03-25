@@ -2,9 +2,6 @@
 
 sudo apt update -y && sudo apt list --upgradable && sudo apt upgrade -y
 
-sudo rm /var/lib/dpkg/lock-frontend
-sudo rm /var/cache/apt/archives/lock
-
 sudo dpkg --configure -a
 
 # Installing snaps
@@ -29,8 +26,8 @@ sudo apt-get update && sudo apt-get install spotify-client
 sudo chmod a+wr /usr/share/spotify
 sudo chmod a+wr /usr/share/spotify/Apps -R
 curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
-/home/$USER/spicetify-cli/spicetify backup apply
-/home/$USER/spicetify-cli/spicetify  config current_theme Dracula
+cd ~/dotfiles/.spicetify/Themes/
+/home/$USER/spicetify-cli/spicetify config current_theme Dracula
 /home/$USER/spicetify-cli/spicetify apply
 
 # sublime - download and installation

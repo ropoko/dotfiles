@@ -23,20 +23,26 @@ source ~/.zshrc
 
 # Installing ASDF
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+
 cd ~/.asdf
-git checkout "$(git describe --abbrev=0 --tags)"
+
+. $HOME/.asdf/asdf.sh
 
 # ASDF - plugins
 asdf plugin-add python
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin-add v
 
-asdf global python 3.9.2
+# ASDF install versions
+asdf install nodejs 14.16.0
+asdf install v 0.2.2
+
+# ASDF set global versions
 asdf global nodejs 14.16.0
 asdf global v 0.2.2
 
-# Configuring python
+# Configuring python 
+sudo ~/dotfiles/update.sh
 update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 sudo apt install python3.8-distutils -y
 
