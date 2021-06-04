@@ -6,16 +6,6 @@ sudo apt upgrade -y
 
 sudo dpkg --configure -a
 
-# Installing snaps
-sudo apt install snapd -y
-sudo snap install code --classic
-sudo snap install discord
-sudo snap install notion-snap
-sudo snap install review-tools
-sudo snap install telegram-desktop
-sudo snap install strimio-desktop
-sudo snap install mailspring
-
 # programs with apt
 
 cd /home/$USER/Downloads
