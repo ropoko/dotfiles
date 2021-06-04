@@ -25,6 +25,9 @@ cd ~
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
 
+rm -rf ~/.zshrc
+cp ~/dotfiles/.zshrc ~
+ 
 source ~/.zshrc
 
 # Installing ASDF
@@ -51,3 +54,7 @@ asdf global v 0.2.2
 sudo ~/dotfiles/update.sh
 update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 sudo apt install python3.8-distutils -y
+
+# Basic configuration for nano
+rm -rf ~/.zshrc
+cp ~/dotfiles/.zshrc ~/
