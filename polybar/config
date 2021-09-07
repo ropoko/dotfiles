@@ -1,0 +1,190 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+background = #222
+foreground = #dfdfdf
+
+[bar/bar1]
+width = 8.9%
+height = 30
+background = ${colors.background}
+foreground = ${colors.foreground}
+bottom = true
+offset-x = 5
+offset-y = 5
+
+border-size = 1
+border-color = #cfcfcf
+
+font-0 = "JetBrainsMono-ExtraLight:size=10;2"
+
+override-redirect = true
+modules-left = i3
+
+[bar/bar2]
+width = 20%
+height = 30
+offset-x = 10%
+offset-y = 5
+bottom = true
+
+padding = 2
+
+border-size = 1
+border-color = #cfcfcf
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = "JetBrainsMono-ExtraLight:size=10;2"
+override-redirect = true
+
+modules-left = cpu memory temperature
+;modules-center = memory
+;modules-right = temperature
+
+[bar/bar3]
+width = 11.2%
+height = 30
+offset-x = 88.5%
+offset-y = 5
+bottom = true
+
+line-size = 0
+border-size = 1
+border-color = #cfcfcf
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = "JetBrainsMono-ExtraLight:size=10;2"
+override-redirect = true
+
+modules-center = date
+modules-left = battery
+
+; -------------------------
+
+;tray-position = right
+;tray-padding = 2
+;tray-background = #0063ff
+
+; MODULES -----------------
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+;label-mode-padding = 2
+;label-mode-foreground = #000
+;label-mode-background = #ff1cec
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background = #1cff69
+label-focused-foreground = #222
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+;label-visible = %index%
+;label-visible-background = ${self.label-focused-background}
+;label-visible-underline = ${self.label-focused-underline}
+;label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+;label-separator = |
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+label = "CPU:%percentage:2%% | "
+
+[module/memory]
+type = internal/memory
+interval = 2
+label = "MEM: %percentage_used%% | "
+
+[module/date]
+type = internal/date
+interval = 5
+
+label = "%time% "
+time = %H:%M
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = " BAT: <label-charging>"
+format-charging-padding = 1
+
+format-charging-background = #1cff69
+format-charging-foreground = #222
+
+label-charging = "%percentage%%"
+
+format-discharging = " BAT: <label-discharging>"
+format-discharging-padding = 1
+
+format-discharging-background = #ff8181
+format-discharging-foreground = #222
+
+label-discharging = "%percentage%%"
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = "TEMP: <label>"
+format-underline = #f50a4d
+format-warn = <label-warn>
+;format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-background = #ff8181
+
+;ramp-0 = 
+;ramp-1 = 
+;ramp-2 = 
+;ramp-foreground = ${colors.foreground-alt}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false

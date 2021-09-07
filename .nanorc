@@ -1,1 +1,8 @@
-.nanorc
+include /usr/share/nano/c.nanorc
+include /usr/share/nano/css.nanorc
+include /usr/share/nano/html.nanorc
+include /usr/share/nano/python.nanorc
+include /usr/share/nano/sh.nanorc
+
+set autoindent
+set linenumbers
