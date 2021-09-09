@@ -1,25 +1,9 @@
 # dotfiles
 
-my personal apps and configuration for elementaryOs 5.1 Hera
+My configuration files tested using Arch.
 
-## List Apps
-- qbitTorrent
-- vivaldi (browser)
-- edge (browser)
-- krita
-- steam
-- caffeine
-- font-manager
-- virtualbox
+**Distro:** Arch btw
 
-## Configurations
-- git
-- zsh
-- oh-my-zsh
-- asdf*
-- nano
-- python 3.8
+**WM:** i3
 
-### ASDF
-- NodeJS - v14.16.0
-- Vlang - v0.2.2
+**Bar:** Polybar
