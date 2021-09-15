@@ -7,3 +7,5 @@ My configuration files tested using Arch.
 **WM:** i3
 
 **Bar:** Polybar
+
+**App Launcher:** rofi
