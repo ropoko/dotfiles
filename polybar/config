@@ -56,10 +56,34 @@ font-0 = "JetBrainsMono-ExtraLight:size=10;2"
 override-redirect = true
 
 modules-left = cpu memory temperature
-;modules-center = memory
-;modules-right = temperature
 
 [bar/bar3]
+width = 8%
+height = 30
+
+line-size = 0
+border-size = 1
+border-color = #cfcfcf
+
+offset-x = 80%
+offset-y = 5
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = "JetBrainsMono-ExtraLight:size=10;2"
+
+modules-center = tray-text
+override-redirect = true
+
+tray-position = right
+tray-padding = 2
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/bar4]
 width = 11.2%
 height = 30
 offset-x = 88.5%
@@ -79,13 +103,12 @@ override-redirect = true
 modules-center = date
 modules-left = battery
 
-; -------------------------
-
-;tray-position = right
-;tray-padding = 2
-;tray-background = #0063ff
 
 ; MODULES -----------------
+
+[module/tray-text]
+type = custom/text
+content = " "
 
 [module/i3]
 type = internal/i3
@@ -117,9 +140,9 @@ label-unfocused-padding = 2
 ;label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+;label-urgent = %index%
+;label-urgent-background = ${colors.alert}
+;label-urgent-padding = 2
 
 ;label-separator = |
 
@@ -161,6 +184,11 @@ format-discharging-background = #ff8181
 format-discharging-foreground = #222
 
 label-discharging = "%percentage%%"
+
+format-full = "100%"
+format-full-padding = 3
+format-full-background = #1cff69
+format-full-foreground = #222
 
 [module/temperature]
 type = internal/temperature
