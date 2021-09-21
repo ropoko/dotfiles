@@ -1,5 +1,7 @@
 # dotfiles
 
+![](https://github.com/ropoko/dotfiles/blob/main/screenshot.jpg)
+
 My configuration files tested using Arch and Xorg.
 
 - Login Manager: lightDm
