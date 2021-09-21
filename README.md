@@ -1,11 +1,20 @@
 # dotfiles
 
-My configuration files tested using Arch.
+My configuration files tested using Arch and Xorg.
 
-**Distro:** Arch btw
+- Login Manager: lightDm
 
-**WM:** i3
+- Distro: Arch btw
 
-**Bar:** Polybar
+- WM: i3
 
-**App Launcher:** rofi
+- Bar: polybar
+
+- App Launcher: rofi
+
+- Compositor: picom
+
+- Z-shell: oh-my-zsh
+
+---
+Startup apps defined in .xinitrc
