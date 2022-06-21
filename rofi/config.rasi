@@ -3,7 +3,7 @@
 configuration {
   modes: [ combi ];
   combi-modes: [ run, filebrowser ];
-  font: "mono 12";
+  font: "JetBrains Mono 12";
   show-icons: true;	
   timeout {
     action: "kb-cancel";
