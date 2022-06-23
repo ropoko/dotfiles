@@ -1,4 +1,4 @@
-@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+@theme "~/.config/rofi/dark-theme.rasi"
 
 configuration {
   modes: [ combi ];
