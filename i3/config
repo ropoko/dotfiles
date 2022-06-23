@@ -4,7 +4,10 @@ set $mod Mod4
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 # powermenu
-bindsym $mod+l exec ~/.config/rofi/scripts/powermenu.sh
+bindsym $mod+p exec ~/.config/rofi/scripts/powermenu.sh
+
+# lockscreen
+bindsym $mod+l exec ~/.config/i3lock/blur.sh
 
 # styling
 client.focused #cfcfcf #cfcfcf #ffffff #cfcfcf #cfcfcf
