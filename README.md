@@ -9,3 +9,7 @@ My configuration files tested using Arch and Xorg.
 - Bar: i3status
 
 - App Launcher: rofi
+
+# screenshots
+- lockscreen
+<img src="https://github.com/ropoko/dotfiles/blob/main/screenshots/lockscreen.png" width="800">
