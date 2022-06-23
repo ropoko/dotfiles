@@ -1,7 +1,10 @@
 set $mod Mod4
 
-# open rofi
+# open app launcher
 bindsym $mod+d exec --no-startup-id rofi -show run
+
+# powermenu
+bindsym $mod+l exec ~/.config/rofi/scripts/powermenu.sh
 
 # styling
 client.focused #cfcfcf #cfcfcf #ffffff #cfcfcf #cfcfcf
