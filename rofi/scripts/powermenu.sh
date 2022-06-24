@@ -1,9 +1,9 @@
 #!/bin/env bash
 
 # menu options
-lock="🔒"
-shutdown="⏻"
-reboot="↺"
+lock=""
+shutdown=""
+reboot=""
 
 # Get answer via rofi
 selected_option=$(echo "$lock
@@ -15,11 +15,10 @@ $shutdown" | rofi -dmenu\
 # Do something based on selected option
 if [ "$selected_option" == "$lock" ]
 then
-    betterlockscreen --lock
+    $HOME/.config/i3lock/blur.sh
 elif [ "$selected_option" == "$shutdown" ]
 then
-    mpv ~/Music/alaram/shutdown.mp3 &
-    doas systemctl poweroff
+    poweroff
 elif [ "$selected_option" == "$reboot" ]
 then
     reboot

@@ -1,10 +1,3 @@
-/*configuration {
-    show-icons: true;
-    font: "JetBrains Mono 28";
-    location: 0;
-}*/
- 
- 
 * {
   border: 0;
   margin: 0;
@@ -21,55 +14,53 @@
   Purple: #bd93f9;
   background-color: @background;
   text-color: @purple;
-  font: "JetBrains Mono 20";
+  font: "FontAwesome 6 Free 20";
 }
- 
- 
+
 window {
     background-color:               @background;
     border:                         2px;
     border-color:                   @line;
     border-radius:                  50px;
-    width:                          400px;   
-    height:                         120px;          
-    x-offset:                       -4;
-    y-offset:                       0;
+    width:                          320px;
+    height:                         120px;
 }
- 
+
 listview {
     background-color:               @background;
     columns:                        1;
     lines:                          5;
-    spacing:                        50px;
+    spacing:                        42px;
     layout:                         horizontal;
 }
- 
+
 mainbox {
     background-color:               @background;
     children:                       [ listview ];
-    padding:                        40px;
+    padding:                        42px;
 }
- 
+
 element {
     background-color:               @background;
     text-color:                     @line;
     orientation:                    horizontal;
 }
- 
+
 element-text {
     background-color:               inherit;
     text-color:                     inherit;
-/*    font:                           "JetBrains Mono 22";*/
     expand:                         false;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
     margin:                         0px;
+    cursor: 			            pointer;
 }
- 
+
 element selected {
     background-color:               @background;
-    text-color:                     @purple;
+    text-color:                     #fff;
     border:                         0px;
-    /*border-radius:                  100%;*/
+    border-radius:                  100%;
     border-color:                   @selected;
+    cursor: 			            pointer;
 }
