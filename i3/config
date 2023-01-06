@@ -3,6 +3,9 @@ set $mod Mod4
 # open app launcher
 bindsym $mod+d exec --no-startup-id rofi -show run
 
+# open flameshot (screenshoot app)
+bindsym $mod+Print exec flameshot gui
+
 # powermenu
 bindsym $mod+p exec ~/.config/rofi/scripts/powermenu.sh
 
